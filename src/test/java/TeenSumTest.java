@@ -16,7 +16,7 @@ public class TeenSumTest {
     public void teenSum1() {
         TeenSum teenSum1 = new TeenSum();
         int actual = teenSum1.teenSum(12, 19);
-        int expected = 12 + 19;
+        int expected = 19;
         assertEquals(actual, expected);
 
     }
@@ -25,7 +25,7 @@ public class TeenSumTest {
     public void teenSum2() {
         TeenSum teenSum2 = new TeenSum();
         int actual = teenSum2.teenSum(13, 20);
-        int expected = 13 + 20;
+        int expected = 19;
         assertEquals(actual, expected);
     }
 
