@@ -4,51 +4,71 @@ import static org.junit.Assert.assertEquals;
 
 public class SeeColorTest {
 
+    //GIVEN
+    SeeColor seeColor = new SeeColor();
+
     @Test
-    public void seeColor() {
-        SeeColor seeColor = new SeeColor();
+    public void ShouldReturnFirstWordBlue() {
+        //WHEN
         String a = seeColor.seeColor("blue is the sky");
         String expected = "blue";
+        //THEN
         assertEquals(a, expected);
 
     }
     @Test
-    public void seeColor1() {
-        SeeColor seeColor1 = new SeeColor();
-        String a = seeColor1.seeColor("red rabbit is a a barbershop");
+    public void ShouldReturnFirstWordRed() {
+        //WHEN
+       String actual = seeColor.seeColor("red rabbit is a a barbershop");
         String expected = "red";
-        assertEquals(a, expected);
+        //THEN
+        assertEquals(actual, expected);
     }
     @Test
-    public void seeColor2() {
-        SeeColor seeColor2 = new SeeColor();
-        String a = seeColor2.seeColor("Only one side of the Moon is visible from the Earth");
+    public void ShouldReturnEmptyString() {
+        //WHEN
+        String actual = seeColor.seeColor("Only one side of the Moon is visible from the Earth");
         String expected = "";
-        assertEquals(a, expected);
+        //THEN
+        assertEquals(actual, expected);
     }
     @Test
-    public void seeColor3() {
-        SeeColor seeColor3 = new SeeColor();
-        String a = seeColor3.seeColor("Red Digital Cinema");
+    public void ShouldReturnEmptyStringBecauseOfUpperCaseRed() {
+        //WHEN
+        String actual = seeColor.seeColor("Red Digital Cinema");
         String expected = "";
-        assertEquals(a, expected);
+        //THEN
+        assertEquals(actual, expected);
     }
 
     @Test
-    public void seeColor4() {
-        SeeColor seeColor4 = new SeeColor();
-        String a = seeColor4.seeColor("Blue endless see");
+    public void ShouldReturnEmptyStringBecauseOfUpperCaseBlue() {
+        //WHEN
+        String actual = seeColor.seeColor("Blue endless see");
         String expected = "";
-        assertEquals(a, expected);
+        //THEN
+        assertEquals(actual, expected);
     }
 
     @Test
-    public void seeColor5() {
-        SeeColor seeColor5 = new SeeColor();
-        String a = seeColor5.seeColor("");
+    public void ShouldReturnEmptyStringWhenGivenEmptyString() {
+        //WHEN
+        String actual= seeColor.seeColor("");
         String expected = "";
-        assertEquals(a, expected);
+        //THEN
+        assertEquals(actual, expected);
     }
+
+    @Test (expected = IllegalArgumentException.class)
+    public void ShouldThrowExceptionWhenStringIsNull() {
+        //WHEN
+        String actual= seeColor.seeColor(null);
+        String expected = "String can't be null";
+        //THEN
+        assertEquals(actual, expected);
+    }
+
+
 
 
 

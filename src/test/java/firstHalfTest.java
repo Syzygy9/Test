@@ -3,31 +3,47 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class firstHalfTest {
+    //GIVEN
+    private FirstHalf firstHalf = new FirstHalf();
 
     @Test
-    public void firstHalf() {
-        FirstHalf firstHalf = new FirstHalf();
+    public void ShouldReturnFirstHalfOfVorona() {
+        //WHEN
         String actual = firstHalf.firstHalf("Vorona");
         String expected = "Vor";
+        //THEN
         assertEquals(actual, expected);
+
     }
 
     @Test
-    public void firstHalf1() {
-        FirstHalf firstHalf1 = new FirstHalf();
-        String actual = firstHalf1.firstHalf("V");
+    public void ShouldReturnFirstHalfOfSingleLetter() {
+        //WHEN
+        String actual = firstHalf.firstHalf("V");
         String expected = "";
+        //THEN
         assertEquals(actual, expected);
     }
-
 
     @Test
-    public void firstHalf2() {
-        FirstHalf firstHalf2 = new FirstHalf();
-        String actual = firstHalf2.firstHalf("Crocodile");
+    public void ShouldReturnFirstHalfOfOddNumberedWord() {
+        //WHEN
+        String actual = firstHalf.firstHalf("Crocodile");
         String expected = "Croc";
+        //THEN
         assertEquals(actual, expected);
     }
+
+    @Test (expected = NullPointerException.class)
+    public void ShouldThrowExceptionWhenStringIsNull() {
+        //WHEN
+        String actual = firstHalf.firstHalf (null);
+        String expected = "Argument can't be null";
+        //THEN
+        assertEquals(actual, expected);
+
+    }
+
 
 
 

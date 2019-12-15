@@ -4,46 +4,54 @@ import static org.junit.Assert.*;
 
 public class TeenSumTest {
 
+    //GIVEN
+    TeenSum teenSum = new TeenSum();
+
     @Test
-    public void teenSum() {
-        TeenSum teenSum = new TeenSum();
+    public void ShouldReturnNineteenWhenCheckingBothBoundaryConditions() {
+        //WHEN
         int actual = teenSum.teenSum(13,19);
         int expected = 19;
+        //THEN
         assertEquals(actual, expected);
             }
 
     @Test
-    public void teenSum1() {
-        TeenSum teenSum1 = new TeenSum();
-        int actual = teenSum1.teenSum(12, 19);
+    public void ShouldReturnNineteenWhenChekingSecondBoundaryCondition() {
+        //WHEN
+        int actual = teenSum.teenSum(12, 19);
         int expected = 19;
+        //THEN
         assertEquals(actual, expected);
 
     }
 
     @Test
-    public void teenSum2() {
-        TeenSum teenSum2 = new TeenSum();
-        int actual = teenSum2.teenSum(13, 20);
+    public void ShouldReturnNineteenWhenCheckingFirstBoundaryCondition() {
+        //WHEN
+        int actual = teenSum.teenSum(13, 20);
         int expected = 19;
+        //THEN
         assertEquals(actual, expected);
     }
 
 
     @Test
-    public void teenSum3() {
-        TeenSum teenSum3 = new TeenSum();
-        int actual = teenSum3.teenSum(11, 21);
+    public void ShouldReturnSumWhenCheckingNumbersOutOfDiapasonBound() {
+        //WHEN
+        int actual = teenSum.teenSum(11, 21);
         int expected = 11 + 21;
+        //THEN
         assertEquals(actual, expected);
 
     }
 
     @Test
-    public void teenSum4() {
-        TeenSum teenSum4 = new TeenSum();
-        int actual = teenSum4.teenSum(15, 16);
+    public void ShouldReturnNineteenWhenCheckingNumbersInDiapasonBounds() {
+        //WHEN
+        int actual = teenSum.teenSum(15, 16);
         int expected = 19;
+        //THEN
         assertEquals(actual, expected);
 
     }

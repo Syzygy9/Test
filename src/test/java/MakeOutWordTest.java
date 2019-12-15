@@ -4,22 +4,28 @@ import static org.junit.Assert.*;
 
 public class MakeOutWordTest {
 
+    //GIVEN
+    MakeOutWord makeOutWord = new MakeOutWord();
+
     @Test
-    public void makeOutWord() {
-        MakeOutWord makeOutWord = new MakeOutWord();
+    public void ShouldReturnWordInQuotationMarks() {
+        //WHEN
         String actual = makeOutWord.makeOutWord ("<<>>", "word");
         String expected = "<<word>>";
+        //THEN
         assertEquals(actual, expected);
 
     }
 
-    @Test
-    public void makeOutWord1() {
-        MakeOutWord makeOutWord1 = new MakeOutWord();
-        String actual = makeOutWord1.makeOutWord ("[]", "Woohoo");
-        String expected = "[Woohoo]";
+    @Test (expected = IllegalArgumentException.class)
+    public void ShouldThrowExceptionWhenArgumentIsNull() {
+        //WHEN
+        String actual = makeOutWord.makeOutWord("<<>>", null);
+        String expected = "The argument can't be null";
+        //THEN
         assertEquals(actual, expected);
 
     }
+
 
 }

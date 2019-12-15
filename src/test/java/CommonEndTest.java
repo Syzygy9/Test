@@ -4,36 +4,39 @@ import static org.junit.Assert.*;
 
 public class CommonEndTest {
 
+    //GIVEN
+    private CommonEnd commonEnd = new CommonEnd();
+
     @Test
-    public void commonEnd() {
-        CommonEnd commonEnd = new CommonEnd();
-        boolean i = commonEnd.commonEnd(new int[] {1,3,5,7,9}, new int[] {1,4,6,8,10});
-        boolean expected = true;
-        assertEquals(i, expected);
+    public void ReturnTrueByTheSameFirstElement () {
+        //WHEN
+        boolean actual = commonEnd.commonEnd(new int[] {1,3,5,7,9}, new int[] {1,4,6,8,10});
+        //THEN
+        assertTrue(actual);
 
     }
     @Test
-    public void commonEnd1() {
-        CommonEnd commonEnd1 = new CommonEnd();
-        boolean i = commonEnd1.commonEnd(new int[]{1, 3, 5, 7, 9}, new int[]{1, 2, 3, 4, 9});
-        boolean expected = true;
-        assertEquals(i, expected);
+    public void ReturnTrueByTheSameFirstAndLastElement() {
+        //WHEN
+        boolean actual = commonEnd.commonEnd(new int[]{1, 3, 5, 7, 9}, new int[]{1, 2, 3, 4, 9});
+        //THEN
+        assertTrue(actual);
     }
 
     @Test
-    public void commonEnd2() {
-        CommonEnd commonEnd2 = new CommonEnd();
-        boolean i = commonEnd2.commonEnd(new int[]{2, 3, 5, 7, 9}, new int[]{1, 2, 3, 4, 9});
-        boolean expected = true;
-        assertEquals(i, expected);
+    public void ReturnTrueByTheSameLastElement() {
+        //WHEN
+        boolean actual = commonEnd.commonEnd(new int[]{2, 3, 5, 7, 9}, new int[]{1, 2, 3, 4, 9});
+        //THEN
+        assertTrue(actual);
     }
 
     @Test
-    public void commonEnd3() {
-        CommonEnd commonEnd4 = new CommonEnd();
-        boolean i = commonEnd4.commonEnd(new int[]{2, 3, 5, 7, 11}, new int[]{1, 2, 3, 4, 9});
-        boolean expected = false;
-        assertEquals(i, expected);
+    public void ReturnFalseByDifferentFirstAndLastElements() {
+        //WHEN
+        boolean actual = commonEnd.commonEnd(new int[]{2, 3, 5, 7, 11}, new int[]{1, 2, 3, 4, 9});
+        //THEN
+        assertFalse(actual);
     }
 
 

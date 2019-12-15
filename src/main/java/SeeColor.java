@@ -1,5 +1,9 @@
 public class SeeColor {
     public String seeColor(String str) {
+
+        if (str == null) {
+            throw new IllegalArgumentException ("String can't be null");
+        }
         if (str.length()>=4) {
             if (str.substring (0,4).equals ("blue"))
                 return "blue";
