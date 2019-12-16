@@ -8,7 +8,7 @@ public class MakeAbbaTest {
     private MakeAbba makeAbba = new MakeAbba();
 
     @Test
-    public void ShouldReturnConctinationInDirectAndReversedOrder() {
+    public void shouldReturnConctinationInDirectAndReversedOrder() {
         //WHEN
         String actual = makeAbba.makeAbba("kotu skoro ", "sorok sutok " );
         String expected = "kotu skoro sorok sutok sorok sutok kotu skoro ";
@@ -17,7 +17,7 @@ public class MakeAbbaTest {
     }
 
     @Test (expected = IllegalArgumentException.class)
-    public void ShouldThrowExceptionWhenBothArgumentsAreNull () {
+    public void shouldThrowExceptionWhenBothArgumentsAreNull () {
         //WHEN
         String actual = makeAbba.makeAbba(null, null);
         String expected = "The arguments can't be null";

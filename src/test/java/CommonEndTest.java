@@ -8,7 +8,7 @@ public class CommonEndTest {
     private CommonEnd commonEnd = new CommonEnd();
 
     @Test
-    public void ReturnTrueByTheSameFirstElement () {
+    public void shouldReturnTrueByTheSameFirstElement () {
         //WHEN
         boolean actual = commonEnd.commonEnd(new int[] {1,3,5,7,9}, new int[] {1,4,6,8,10});
         //THEN
@@ -16,7 +16,7 @@ public class CommonEndTest {
 
     }
     @Test
-    public void ReturnTrueByTheSameFirstAndLastElement() {
+    public void shouldReturnTrueByTheSameFirstAndLastElement() {
         //WHEN
         boolean actual = commonEnd.commonEnd(new int[]{1, 3, 5, 7, 9}, new int[]{1, 2, 3, 4, 9});
         //THEN
@@ -24,7 +24,7 @@ public class CommonEndTest {
     }
 
     @Test
-    public void ReturnTrueByTheSameLastElement() {
+    public void shouldReturnTrueByTheSameLastElement() {
         //WHEN
         boolean actual = commonEnd.commonEnd(new int[]{2, 3, 5, 7, 9}, new int[]{1, 2, 3, 4, 9});
         //THEN
@@ -32,7 +32,7 @@ public class CommonEndTest {
     }
 
     @Test
-    public void ReturnFalseByDifferentFirstAndLastElements() {
+    public void shouldReturnFalseByDifferentFirstAndLastElements() {
         //WHEN
         boolean actual = commonEnd.commonEnd(new int[]{2, 3, 5, 7, 11}, new int[]{1, 2, 3, 4, 9});
         //THEN

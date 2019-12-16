@@ -7,7 +7,7 @@ public class firstHalfTest {
     private FirstHalf firstHalf = new FirstHalf();
 
     @Test
-    public void ShouldReturnFirstHalfOfVorona() {
+    public void shouldReturnFirstHalfOfVorona() {
         //WHEN
         String actual = firstHalf.firstHalf("Vorona");
         String expected = "Vor";
@@ -17,7 +17,7 @@ public class firstHalfTest {
     }
 
     @Test
-    public void ShouldReturnFirstHalfOfSingleLetter() {
+    public void shouldReturnFirstHalfOfSingleLetter() {
         //WHEN
         String actual = firstHalf.firstHalf("V");
         String expected = "";
@@ -26,7 +26,7 @@ public class firstHalfTest {
     }
 
     @Test
-    public void ShouldReturnFirstHalfOfOddNumberedWord() {
+    public void shouldReturnFirstHalfOfOddNumberedWord() {
         //WHEN
         String actual = firstHalf.firstHalf("Crocodile");
         String expected = "Croc";
@@ -35,7 +35,7 @@ public class firstHalfTest {
     }
 
     @Test (expected = NullPointerException.class)
-    public void ShouldThrowExceptionWhenStringIsNull() {
+    public void shouldThrowExceptionWhenStringIsNull() {
         //WHEN
         String actual = firstHalf.firstHalf (null);
         String expected = "Argument can't be null";

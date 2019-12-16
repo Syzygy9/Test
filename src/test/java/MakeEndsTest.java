@@ -5,10 +5,10 @@ import static org.junit.Assert.*;
 public class MakeEndsTest {
 
     //GIVEN
-    MakeEnds makeEnds = new MakeEnds();
+    private MakeEnds makeEnds = new MakeEnds();
 
     @Test
-    public void ShouldReturnFirstAndLastElement() {
+    public void shouldReturnFirstAndLastElement() {
         //WHEN
         int[] actual = makeEnds.makeEnds(new int[]{1, 2, 3, 4, 5, 6});
         int[] expected = new int[]{1, 6};
@@ -17,7 +17,7 @@ public class MakeEndsTest {
     }
 
     @Test
-    public void ShouldReturnFirstZeroElementAndLastElement() {
+    public void shouldReturnFirstZeroElementAndLastElement() {
         //WHEN
         int[] actual = makeEnds.makeEnds(new int[]{0, 1, 2, 3, 4, 5});
         int[] expected = new int[]{0, 5};
@@ -26,7 +26,7 @@ public class MakeEndsTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void ShouldThrowExceptionWhenArgumentIsNull() {
+    public void shouldThrowExceptionWhenArgumentIsNull() {
         //WHEN
         int[] actual = makeEnds.makeEnds(null);
 

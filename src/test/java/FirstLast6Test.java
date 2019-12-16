@@ -8,7 +8,7 @@ public class FirstLast6Test {
     private FirstLast6 firstLast6 = new FirstLast6();
 
     @Test
-    public void ReturnTrueByLastEquals6() {
+    public void shouldReturnTrueByLastEquals6() {
         //WHEN
         boolean actual = firstLast6.firstLast6(new int [] {1,2,3,4,5,6});
         //THEN
@@ -17,7 +17,7 @@ public class FirstLast6Test {
     }
 
     @Test
-    public void ReturnFalseByNeitherFirstNorLastEquals6() {
+    public void shouldReturnFalseByNeitherFirstNorLastEquals6() {
         //WHEN
         boolean actual = firstLast6.firstLast6(new int[]{1, 2, 3, 4, 5});
         //THEN
@@ -25,7 +25,7 @@ public class FirstLast6Test {
     }
 
     @Test
-    public void ReturnFalseBy6IsInTheMiddle() {
+    public void shouldReturnFalseBy6IsInTheMiddle() {
         //WHEN
         boolean actual = firstLast6.firstLast6(new int[]{1, 2, 6, 4, 5});
         //THEN
@@ -33,7 +33,7 @@ public class FirstLast6Test {
     }
 
     @Test
-    public void ReturnTrueByFirstEquals6() {
+    public void shouldReturnTrueByFirstEquals6() {
         //WHEN
         boolean actual = firstLast6.firstLast6(new int[]{6, 5, 4, 3, 2});
         //THEN

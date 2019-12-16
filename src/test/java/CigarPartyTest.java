@@ -6,7 +6,7 @@ public class CigarPartyTest {
     private CigarParty cigarParty = new CigarParty();
 
     @org.junit.Test
-    public void ShouldReturnTrueByBoundaryConditionOnWeekend() {
+    public void shouldReturnTrueByBoundaryConditionOnWeekend() {
         //WHEN
         boolean actual = cigarParty.cigarParty(40, true);
         //THEN
@@ -15,7 +15,7 @@ public class CigarPartyTest {
     }
 
     @org.junit.Test
-    public void ShouldReturnTrueByBoundaryConditionOnWeekday() {
+    public void shouldReturnTrueByBoundaryConditionOnWeekday() {
         //WHEN
         boolean actual = cigarParty.cigarParty(40, false);
         //THEN
@@ -24,7 +24,7 @@ public class CigarPartyTest {
     }
 
     @org.junit.Test
-    public void ShouldReturnTrueByValidValueOnWeekday() {
+    public void shouldReturnTrueByValidValueOnWeekday() {
         //WHEN
         boolean actual = cigarParty.cigarParty(60, false);
         //THEN
@@ -34,7 +34,7 @@ public class CigarPartyTest {
 
 
     @org.junit.Test
-    public void ShouldReturnTrueByValidValueOnWeekend() {
+    public void shouldReturnTrueByValidValueOnWeekend() {
         //WHEN
         boolean actual = cigarParty.cigarParty(65, true);
         //THEN
@@ -43,7 +43,7 @@ public class CigarPartyTest {
     }
 
     @org.junit.Test
-    public void ShouldReturnFalseByInvalidValueOnWeekday() {
+    public void shouldReturnFalseByInvalidValueOnWeekday() {
         //WHEN
         boolean actual = cigarParty.cigarParty(65, false);
         //THEN
@@ -52,7 +52,7 @@ public class CigarPartyTest {
     }
 
     @org.junit.Test
-    public void ShouldReturnFalseByNullValueOnWeekend() {
+    public void shouldReturnFalseByNullValueOnWeekend() {
         //WHEN
         boolean actual = cigarParty.cigarParty(0, true);
         //THEN
@@ -60,7 +60,7 @@ public class CigarPartyTest {
     }
 
     @org.junit.Test
-    public void ShouldReturnFalseByNullValueOnWeekday() {
+    public void shouldReturnFalseByNullValueOnWeekday() {
         //WHEN
         boolean actual = cigarParty.cigarParty(0, false);
         //THEN
@@ -68,7 +68,7 @@ public class CigarPartyTest {
     }
 
     @org.junit.Test
-    public void ShouldReturnTrueByBigValidValueOnWeekend() {
+    public void shouldReturnTrueByBigValidValueOnWeekend() {
         //WHEN
         boolean actual = cigarParty.cigarParty(1000000000, true);
         //THEN

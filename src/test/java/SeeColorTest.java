@@ -5,10 +5,10 @@ import static org.junit.Assert.assertEquals;
 public class SeeColorTest {
 
     //GIVEN
-    SeeColor seeColor = new SeeColor();
+    private SeeColor seeColor = new SeeColor();
 
     @Test
-    public void ShouldReturnFirstWordBlue() {
+    public void shouldReturnFirstWordBlue() {
         //WHEN
         String a = seeColor.seeColor("blue is the sky");
         String expected = "blue";
@@ -17,7 +17,7 @@ public class SeeColorTest {
 
     }
     @Test
-    public void ShouldReturnFirstWordRed() {
+    public void shouldReturnFirstWordRed() {
         //WHEN
        String actual = seeColor.seeColor("red rabbit is a a barbershop");
         String expected = "red";
@@ -25,7 +25,7 @@ public class SeeColorTest {
         assertEquals(actual, expected);
     }
     @Test
-    public void ShouldReturnEmptyString() {
+    public void shouldReturnEmptyString() {
         //WHEN
         String actual = seeColor.seeColor("Only one side of the Moon is visible from the Earth");
         String expected = "";
@@ -33,7 +33,7 @@ public class SeeColorTest {
         assertEquals(actual, expected);
     }
     @Test
-    public void ShouldReturnEmptyStringBecauseOfUpperCaseRed() {
+    public void shouldReturnEmptyStringBecauseOfUpperCaseRed() {
         //WHEN
         String actual = seeColor.seeColor("Red Digital Cinema");
         String expected = "";
@@ -42,7 +42,7 @@ public class SeeColorTest {
     }
 
     @Test
-    public void ShouldReturnEmptyStringBecauseOfUpperCaseBlue() {
+    public void shouldReturnEmptyStringBecauseOfUpperCaseBlue() {
         //WHEN
         String actual = seeColor.seeColor("Blue endless see");
         String expected = "";
@@ -51,7 +51,7 @@ public class SeeColorTest {
     }
 
     @Test
-    public void ShouldReturnEmptyStringWhenGivenEmptyString() {
+    public void shouldReturnEmptyStringWhenGivenEmptyString() {
         //WHEN
         String actual= seeColor.seeColor("");
         String expected = "";
@@ -60,7 +60,7 @@ public class SeeColorTest {
     }
 
     @Test (expected = IllegalArgumentException.class)
-    public void ShouldThrowExceptionWhenStringIsNull() {
+    public void shouldThrowExceptionWhenStringIsNull() {
         //WHEN
         String actual= seeColor.seeColor(null);
         String expected = "String can't be null";

@@ -5,10 +5,10 @@ import static org.junit.Assert.*;
 public class TeenSumTest {
 
     //GIVEN
-    TeenSum teenSum = new TeenSum();
+    private TeenSum teenSum = new TeenSum();
 
     @Test
-    public void ShouldReturnNineteenWhenCheckingBothBoundaryConditions() {
+    public void shouldReturnNineteenWhenCheckingBothBoundaryConditions() {
         //WHEN
         int actual = teenSum.teenSum(13,19);
         int expected = 19;
@@ -17,7 +17,7 @@ public class TeenSumTest {
             }
 
     @Test
-    public void ShouldReturnNineteenWhenChekingSecondBoundaryCondition() {
+    public void shouldReturnNineteenWhenChekingSecondBoundaryCondition() {
         //WHEN
         int actual = teenSum.teenSum(12, 19);
         int expected = 19;
@@ -27,7 +27,7 @@ public class TeenSumTest {
     }
 
     @Test
-    public void ShouldReturnNineteenWhenCheckingFirstBoundaryCondition() {
+    public void shouldReturnNineteenWhenCheckingFirstBoundaryCondition() {
         //WHEN
         int actual = teenSum.teenSum(13, 20);
         int expected = 19;
@@ -37,7 +37,7 @@ public class TeenSumTest {
 
 
     @Test
-    public void ShouldReturnSumWhenCheckingNumbersOutOfDiapasonBound() {
+    public void shouldReturnSumWhenCheckingNumbersOutOfDiapasonBound() {
         //WHEN
         int actual = teenSum.teenSum(11, 21);
         int expected = 11 + 21;
@@ -47,7 +47,7 @@ public class TeenSumTest {
     }
 
     @Test
-    public void ShouldReturnNineteenWhenCheckingNumbersInDiapasonBounds() {
+    public void shouldReturnNineteenWhenCheckingNumbersInDiapasonBounds() {
         //WHEN
         int actual = teenSum.teenSum(15, 16);
         int expected = 19;

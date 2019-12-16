@@ -5,10 +5,10 @@ import static org.junit.Assert.*;
 public class Or35Test {
 
     //GIVEN
-    Or35 or35 = new Or35();
+    private Or35 or35 = new Or35();
 
     @Test
-    public void ShouldReturnTrueWhenNumberIsDividedByThreeAndFiveWithoutReminder() {
+    public void shouldReturnTrueWhenNumberIsDividedByThreeAndFiveWithoutReminder() {
         //WHEN
         boolean actual = or35.or35(15);
         //THEN
@@ -16,7 +16,7 @@ public class Or35Test {
     }
 
     @Test
-    public void ShouldReturnTrueWhenNumberIsDividedByThreeWithoutReminder() {
+    public void shouldReturnTrueWhenNumberIsDividedByThreeWithoutReminder() {
         //WHEN
         boolean actual = or35.or35(3);
         //THEN
@@ -24,7 +24,7 @@ public class Or35Test {
     }
 
     @Test
-    public void ShouldReturnTrueWhenNumberIsDividedByFiveWithoutReminder() {
+    public void shouldReturnTrueWhenNumberIsDividedByFiveWithoutReminder() {
         //WHEN
         boolean actual = or35.or35(5);
         //THEN
@@ -32,7 +32,7 @@ public class Or35Test {
     }
 
     @Test
-    public void ShouldReturnTrueWhenZeroIsDividedByThreeAndFiveWithoutReminder() {
+    public void shouldReturnTrueWhenZeroIsDividedByThreeAndFiveWithoutReminder() {
         //WHEN
         boolean actual = or35.or35(0);
         //THEN
@@ -40,7 +40,7 @@ public class Or35Test {
     }
 
     @Test
-    public void ShouldReturnFalseWhenNumberIsDividedByThreeAndFiveWithReminder() {
+    public void shouldReturnFalseWhenNumberIsDividedByThreeAndFiveWithReminder() {
         //WHEN
         boolean actual = or35.or35(41);
         //THEN

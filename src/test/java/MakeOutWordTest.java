@@ -5,10 +5,10 @@ import static org.junit.Assert.*;
 public class MakeOutWordTest {
 
     //GIVEN
-    MakeOutWord makeOutWord = new MakeOutWord();
+    private MakeOutWord makeOutWord = new MakeOutWord();
 
     @Test
-    public void ShouldReturnWordInQuotationMarks() {
+    public void shouldReturnWordInQuotationMarks() {
         //WHEN
         String actual = makeOutWord.makeOutWord ("<<>>", "word");
         String expected = "<<word>>";
@@ -18,7 +18,7 @@ public class MakeOutWordTest {
     }
 
     @Test (expected = IllegalArgumentException.class)
-    public void ShouldThrowExceptionWhenArgumentIsNull() {
+    public void shouldThrowExceptionWhenArgumentIsNull() {
         //WHEN
         String actual = makeOutWord.makeOutWord("<<>>", null);
         String expected = "The argument can't be null";
